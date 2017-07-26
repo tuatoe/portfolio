@@ -7,7 +7,6 @@ class SlideShow{
         this.next = $('.next');
         this.slideIndex = 0;
         
-        
         this.showSlides();
     }
     
