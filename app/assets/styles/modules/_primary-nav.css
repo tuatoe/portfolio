@@ -25,13 +25,12 @@
         padding-right:.4375rem;
 
         @mixin atMedium {
-        padding-right:1.25rem;
         display: inline-block;
         position: relative;
             z-index: 1;
             a {
                 cursor: pointer;
-                padding:1.2rem .625rem;
+                padding:.8rem .625rem;
                 font-weight: bold;
                 font-size: .875rem;
                 
@@ -85,19 +84,20 @@ a {
     color:#FFF;
     text-decoration: none;
     font-weight: 300;
-    font-size:1.8rem;
-    background-color: rgba($mainBlue,.5);
+    font-size:1rem;
+    background-color: rgba($mainBlue,.8);
     display: block;
     cursor: pointer;
-    
+    padding:10px;
+  
     
     &:hover{
-        background-color:$mainGreen;
-        color:#FFF;
+        
+        color:$mainOrange;
     }
 
     @mixin atMedium {
-        font-size:1rem;
+        font-size:1.8rem;
         padding:.75rem 0;
         background-color: transparent;
 

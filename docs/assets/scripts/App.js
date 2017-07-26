@@ -70,6 +70,10 @@
 
 	var _TabContent2 = _interopRequireDefault(_TabContent);
 
+	var _SlideShow = __webpack_require__(9);
+
+	var _SlideShow2 = _interopRequireDefault(_SlideShow);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var mobileMenu = new _MobileMenu2.default();
@@ -78,9 +82,10 @@
 	new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), "60%");
 
 	var stickyHeader = new _StickyHeader2.default();
+
 	var modal = new _Modal2.default();
 
-	var tabContent = new _TabContent2.default();
+	var slideShow = new _SlideShow2.default();
 
 /***/ },
 /* 1 */
@@ -10809,7 +10814,7 @@
 
 	    this.lazyImages = (0, _jquery2.default)('.lazyload');
 	    this.siteHeader = (0, _jquery2.default)('.site-header');
-	    this.headerTriggerElement = (0, _jquery2.default)('.large-hero__container__text-content__title');
+	    this.headerTriggerElement = (0, _jquery2.default)('.large-hero__title');
 	    this.createHeaderWaypoint();
 	    this.pageSections = (0, _jquery2.default)('.page-section');
 	    this.headerLinks = (0, _jquery2.default)('.primary-nav a');
@@ -11359,6 +11364,144 @@
 	}();
 
 	exports.default = TabContent;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var SlideShow = function () {
+	    function SlideShow() {
+	        _classCallCheck(this, SlideShow);
+
+	        this.prev = (0, _jquery2.default)('.prev');
+	        this.next = (0, _jquery2.default)('.next');
+	        this.slideIndex = 0;
+
+	        this.showSlides();
+	    }
+
+	    _createClass(SlideShow, [{
+	        key: 'showSlides',
+	        value: function (_showSlides) {
+	            function showSlides() {
+	                return _showSlides.apply(this, arguments);
+	            }
+
+	            showSlides.toString = function () {
+	                return _showSlides.toString();
+	            };
+
+	            return showSlides;
+	        }(function () {
+	            var i;
+	            var slides = (0, _jquery2.default)('.mySlides');
+	            var dots = (0, _jquery2.default)('.dot');
+	            //hide slides
+	            for (i = 0; i < slides.length; i++) {
+	                slides[i].style.display = 'none';
+	            }
+	            slideIndex++;
+
+	            if (this.slideIndex > slides.length) {
+	                this.slideIndex = 1;
+	            }
+
+	            for (i = 0; i < dots.length; i++) {
+	                dots[i].className = dots[i].className.replace(' active', '');
+	            }
+
+	            slides[this.slideIndex - 1].style.display = 'block';
+	            dots[this.slideIndex - 1].className += ' active';
+	            setTimeout(showSlides, 200);
+	        })
+	    }]);
+
+	    return SlideShow;
+	}();
+
+	exports.default = SlideShow;
+
+	/*
+
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	    var i;
+	    var slides = document.getElementsByClassName("mySlides");
+	    var dots = document.getElementsByClassName("dot");
+	    for (i = 0; i < slides.length; i++) {
+	       slides[i].style.display = "none";  
+	    }
+	    slideIndex++;
+	    if (slideIndex> slides.length) {slideIndex = 1}    
+	    for (i = 0; i < dots.length; i++) {
+	        dots[i].className = dots[i].className.replace(" active", "");
+	    }
+	    slides[slideIndex-1].style.display = "block";  
+	    dots[slideIndex-1].className += " active";
+	    setTimeout(showSlides, 2000); // Change image every 2 seconds
+	}
+	*/
+
+	/*
+	 events(){
+	        prev.on('click',plusSlides(-1));
+	        next.on('click',plusSlides(1));
+	        
+	        dot.on('click',currentSlide(1));
+	        dot.on('click',currentSlide(2));
+	        dot.on('click',currentSlide(3));
+	    }
+	    
+	    showSlides(n) {
+	        var i;
+	        for (i = 0; i < slides.length; i++) {
+	           slides[i].style.display = "none";  
+	        }
+	        
+	        slideIndex++;
+	        
+	        if (slideIndex> slides.length) {
+	            slideIndex = 1
+	        } 
+	        
+	        for (i = 0; i < dots.length; i++) {
+	            dots[i].className = this.dots[i].className.replace(" active", "");
+	        }
+	        
+	        slides[slideIndex-1].style.display = "block";  
+	        
+	        dots[slideIndex-1].className += " active";
+	        
+	        setTimeout(showSlides, 2000); // Change image every 2 seconds
+	    }
+	    
+	    
+	    plusSlides(n) {
+	      showSlides(slideIndex += n);
+	    }
+
+	    currentSlide(n) {
+	      showSlides(slideIndex = n);
+	    }
+	*/
 
 /***/ }
 /******/ ]);

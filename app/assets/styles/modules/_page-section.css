@@ -20,6 +20,12 @@
     background-color:$mainBlue;
     color:#FFF;
   }
+    
+  
+    
+    &--gray{
+        background-color:#eee;
+    }
     &--green{
         background-color:$mainGreen
     }
@@ -28,6 +34,8 @@
         text-align: center;
         color:$mainBlue;
         margin-bottom:1.2em;
+        font-size:3.5rem;
+        font-weight: 300;
      
       
         &--green-text{
@@ -35,6 +43,10 @@
         }
          &--blue-text{
             color:$mainBlue;
+        }
+        
+        &--gray-text{
+            color:#555;
         }
         
          &--white-text{

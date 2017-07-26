@@ -1,0 +1,30 @@
+.projects{
+    h4{
+        background-color: #ddd;
+        padding:.5rem;
+        text-align: center;
+        color:#777;
+        margin-top:0;
+        margin-bottom:2rem;
+    }
+    &__new-projects{
+        position: relative;
+        
+        &__new{
+        position: absolute;
+        background-color:$mainLightBlue;
+        color:$mainBlue;
+        top:0;
+        right:.93rem;
+        padding:1rem;
+    }
+    }
+    
+    img{
+        max-width: 100%;
+        width:100%;
+        height: auto;
+    }
+    
+    
+}
