@@ -9,7 +9,11 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, afforable travel">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
 
-  <link rel="stylesheet" href="assets/styles/styles-50001a47fe.css"/>
+   
+
+    
+  <link rel="stylesheet" href="assets/styles/styles-5653f676aa.css"/>   
+    
   <script src="assets/scripts/Vendor.js"></script>
     
  <script src="assets/scripts/froogaloop2.min.js"></script>
@@ -42,9 +46,24 @@
   </header>
 
     
-<div id="home" class="large-hero slideshow-container" data-matching-link="home-link">
-    <div class="slideshow-container">
-        <div class="mySlides fade">
+<div id="home" class="large-hero" data-matching-link="home-link">
+    
+    <div id="heroSlider">
+        
+        <ul class="hero-slides">
+            <li class="hero-slide">
+             <picture>
+                <img srcset="assets/images/hero-slider-02.jpg" class="large-hero__image">
+            </picture>
+            <div class="large-hero__text-content">
+                <div class="wrapper">
+                    <h2 class="large-hero__title">Your clarity.</h2>
+                    <h2 class="large-hero__sub-title">One trip away.</h2>
+                    <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
+                </div>
+            </div>
+            </li>
+             <li class="hero-slide">
             <picture>
                 <img srcset="assets/images/hero-slider-01.jpg" class="large-hero__image">
             </picture>
@@ -55,29 +74,17 @@
                     <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="mySlides fade">
-            <picture>
-                <img srcset="assets/images/hero-slider-02.jpg" class="large-hero__image">
-            </picture>
-            <div class="large-hero__text-content">
-                <div class="wrapper">
-                    <h2 class="large-hero__title">Your clarity.</h2>
-                    <h2 class="large-hero__sub-title">One trip away.</h2>
-                    <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-                </div>
-            </div>
-        </div>    
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </li>
+        </ul>
+        
+        <!--<a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>-->
     </div>
     
     <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
     </div>
     
 </div>
@@ -236,7 +243,6 @@
     
 </div>
 
-    <script src="assets/scripts/lightbox.js"></script>
   
   <script src="assets/scripts/App.js"></script>
 </body>

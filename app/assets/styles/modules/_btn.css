@@ -8,14 +8,17 @@
 
     &--blue{
         background-color:$mainBlue;
+        border-radius: 0;
       &:hover{
-          background-color:$mainOrange;
+          background-color:$mainLightBlue;
+          color:$mainBlue;
       }
     }    
   &--orange{
     background:$mainOrange;
        &:hover{
           background-color:$mainGreen;
+           
       }
     }
 

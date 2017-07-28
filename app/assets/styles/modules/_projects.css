@@ -1,6 +1,5 @@
 .projects{
     h4{
-        background-color: #ddd;
         padding:.5rem;
         text-align: center;
         color:#777;
@@ -15,7 +14,7 @@
         background-color:$mainLightBlue;
         color:$mainBlue;
         top:0;
-        right:.93rem;
+        right:1.56rem;
         padding:1rem;
     }
     }

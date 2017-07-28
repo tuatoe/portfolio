@@ -1,43 +1,101 @@
-import $ from 'jquery';
-
+import $ from "jquery";
 class SlideShow{
     
     constructor(){
-        this.prev = $('.prev');
-        this.next = $('.next');
-        this.slideIndex = 0;
+        //configuration
+        this.width = 1200;
+        this.animationSpeed = 1000;
+        this.pause = 3000;
+        this.currentSlide = 1;
         
-        this.showSlides();
+        //cache DOM
+        this.heroSlider = $('#slider');
+        this.sliderContainer = this.heroSlider.find('.slides');
+        this.heroSlides = this.sliderContainer.find('.slide');
+        
+        this.prev = $(".prev");
+        this.next = $(".next"); 
+        this.dots = $('.dot');
+        
+        this.interval;
+        this.startSlider();
+        this.events();
+        
     }
     
+    events(){
+         this.heroSlider
+            .on('mouseenter', this.stopSlider)
+            .on('mouseleave', this.startSlider);
     
-    showSlides(){
-        var i;
-        var slides = $('.mySlides');
-        var dots = $('.dot');
-        //hide slides
-        for(i = 0; i < slides.length; i++){
-            slides[i].style.display = 'none';
-        }
-        slideIndex++;
-        
-        if(this.slideIndex > slides.length){this.slideIndex = 1;}
-        
-        for(i = 0; i < dots.length; i++){
-            dots[i].className = dots[i].className.replace(' active', '');
-        }
-        
-        slides[this.slideIndex-1].style.display = 'block';
-        dots[this.slideIndex-1].className += ' active';
-        setTimeout(showSlides, 200);
     }
-   
+    
+   startSlider() {
+        this.interval = setInterval(function(){
+            //animate margin-left
+            this.heroSlides.animate({'margin-left': '-=' + this.width}, this.animationSpeed,function(){
+                this.currentSlide++;
+                if(this.currentSlide === this.heroSlides.length){
+                    this.currentSlide = 1;
+                    this.heroSlides.css('margin-left', '0');
+                }
+            })
+        }, this.pause);
+    }
+    
+   stopSlider(){
+       clearInterval(this.interval);
+   }
     
 }
 
 export default SlideShow;
 
 /*
+
+
+
+
+ //configuration
+    var width = 1200;
+    var animationSpeed = 1000;
+    var pause = 3000;
+    var currentSlide = 1;
+    
+    //cache DOM
+    var $heroSlider = $('#hero-slider');
+    var $slideContainer = $heroSlider.find('.hero-slides');
+    var $heroSlides = $slideContainer.find('.hero-slide')
+    
+    var interval;
+    
+    function startSlider(){
+        interval = setInterval(function(){
+            //animate margin-left
+            $slideContainer.animate({'margin-left': '-=' +width}, animationSpeed,function(){
+                currentSlide++;
+                 //if it's last slide, go to position 1(0px)
+                if(currentSlide === $heroSlides.length){
+                    currentSlide = 1;
+                    $slideContainer.css('margin-left', '0');
+                }
+            });
+        }, pause);
+    }
+    
+    function stopSlider(){
+        clearInterval(interval);
+    }
+   
+    $heroSlider
+     //listen for mouseenter and pause  
+        .on('mouseenter', stopSlider)
+    //resume on mouseleave
+        .on('mouseleave', startSlider);
+    
+    startSlider();
+
+
 
 var slideIndex = 0;
 showSlides();

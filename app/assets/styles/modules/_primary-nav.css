@@ -93,7 +93,7 @@ a {
     
     &:hover{
         
-        color:$mainOrange;
+        color:$mainLightBlue;
     }
 
     @mixin atMedium {

@@ -15,7 +15,7 @@
 }
 
 &--gutters-small{
-  margin-right:-15px;
+  margin-right:-25px;
 }
 
 &--gutters > div{
@@ -27,7 +27,7 @@
 }
 
 &--gutters-small > div{
-  padding-right:15px;
+  padding-right:25px;
 }
 
 &__b-margin-until-medium{

@@ -1,24 +1,25 @@
-ul.social-icons{
-    list-style: none;
-    text-align: center;
-    width:350px;
-    margin:0 auto;
+.social-icons{
+  text-align: center;
+
+  &__icon {
+    background-color: $mainBlue;
+    display: inline-block;
+    margin: 0 5px 5px 5px;
+    width:33%;
+    height:72px;
     position: relative;
-     li{
-        padding:10px;
-        border:1px solid $mainGreen;
-        float:left;
-        width:52px;
-         height: 48px;
-         margin-right:25px;
-         cursor: pointer;
-         border-radius: 5px;
-         &:last-child{
-             margin-right:0;
-         }
-         &:hover{
-             border:1px solid $mainOrange;
-             color:$mainOrange;
-         }
+
+    @mixin atSmall{
+      width:72px;
+        margin: 0 5px;
     }
+
+    .icon{
+      display: block;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }

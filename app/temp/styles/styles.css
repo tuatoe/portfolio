@@ -491,14 +491,8 @@ button{
 }
 
 .large-hero{
-  border-bottom:10px solid #123241;
+  border-bottom: 5px solid rgba(102,204,255,.8);
   position: relative;
-
-}
-
-.large-hero img{
-  max-width: 100%;
-  height: auto;
 }
 
 .large-hero__text-content{
@@ -521,23 +515,31 @@ button{
 
 .large-hero__image{
   display: block;
-  background-size:cover;
-  width:100%;
-  height:700px;
-  overflow: hidden;
 }
 
 .large-hero__title{
   font-weight:300;
   color:#123241;
-  font-size:2.4rem;
+  font-size:2rem;
   margin:0;
+  font-weight: bold;
+}
+
+.large-hero__title--white{
+  color:#FFF;
 }
 
 @media(min-width:530px) {
 
   .large-hero__title {
-    font-size: 4.8rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media(min-width:800px) {
+
+  .large-hero__title {
+    font-size: 4rem;
   }
 }
 
@@ -557,7 +559,8 @@ button{
 
 .large-hero__description{
   color:#FFF;
-  font-size:1.1rem;
+  font-size:1.4rem;
+  font-weight: 700;
   font-weight: 100;
   text-shadow: 2px 2px 0 rgba(0,0,0,.1);
   max-width:30rem;
@@ -572,6 +575,12 @@ button{
   }
 }
 
+.large-hero ul{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
 .btn{
   background-color:#123241;
   color:#FFF;
@@ -583,10 +592,12 @@ button{
 
 .btn--blue{
   background-color:#123241;
+  border-radius: 0;
 }
 
 .btn--blue:hover{
-  background-color:#d59541;
+  background-color:#66ccff;
+  color:#123241;
 }
 
 .btn--orange{
@@ -830,7 +841,7 @@ button{
 }
 
 .row--gutters-small{
-  margin-right:-15px;
+  margin-right:-25px;
 }
 
 .row--gutters > div{
@@ -842,7 +853,7 @@ button{
 }
 
 .row--gutters-small > div{
-  padding-right:15px;
+  padding-right:25px;
 }
 
 .row__b-margin-until-medium{
@@ -1067,10 +1078,12 @@ button{
   .site-header {
     position: fixed;
     background-color: rgba(18,50,65,.7);
+    border-bottom: 1px solid #66ccff;
   }
 
   .site-header--dark {
-    background-color: rgba(23,51,72, .85);
+    background-color: rgba(18,50,65, .95);
+    border-bottom: 5px solid #66ccff;
   }
 }
 
@@ -1328,7 +1341,7 @@ button{
 }
 
 .primary-nav a:hover{
-  color:#d59541;
+  color:#66ccff;
 }
 
 @media(min-width:800px) {
@@ -1382,13 +1395,10 @@ button{
 
 .modal__inner {
   position: absolute;
-  top: 20%;
+  width:100%;
+  top:50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  margin: 0 auto;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .modal__description{
@@ -1417,7 +1427,13 @@ button{
 
 .fa{
     color:#FFF;
-    font-size:1.5rem;
+    font-size:3rem;
+    position: absolute;
+    margin-top:17%;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-align: center;
 }
 
 .fa--green{
@@ -1439,43 +1455,39 @@ button{
   margin-right: 1rem;
 }
 
-.fa-edit:before,.fa-heart:before,
-.fa-star:before,.fa-pencil:before, 
-.fa-book:before,.fa-check-circle-o:before{
-    font-size:3rem;
-}
-
 .footer{
     text-align: center;
     color:#FFF;
 }
 
-ul.social-icons{
-    list-style: none;
-    text-align: center;
-    width:350px;
-    margin:0 auto;
-    position: relative;
+.social-icons{
+  text-align: center;
 }
 
-ul.social-icons li{
-  padding:10px;
-  border:1px solid #00d089;
-  float:left;
-  width:52px;
-  height: 48px;
-  margin-right:25px;
-  cursor: pointer;
-  border-radius: 5px;
+.social-icons__icon {
+  background-color: #123241;
+  display: inline-block;
+  margin: 0 5px 5px 5px;
+  width:33%;
+  height:72px;
+  position: relative;
 }
 
-ul.social-icons li:last-child{
-  margin-right:0;
+@media(min-width:530px) {
+
+  .social-icons__icon {
+    width: 72px;
+    margin: 0 5px;
+  }
 }
 
-ul.social-icons li:hover{
-  border:1px solid #d59541;
-  color:#d59541;
+.social-icons__icon .icon{
+  display: block;
+  position: absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .about-me ul {
@@ -1515,7 +1527,6 @@ ul.social-icons li:hover{
 }
 
 .projects h4{
-  background-color: #ddd;
   padding:.5rem;
   text-align: center;
   color:#777;
@@ -1532,7 +1543,7 @@ ul.social-icons li:hover{
   background-color:#66ccff;
   color:#123241;
   top:0;
-  right:.93rem;
+  right:1.56rem;
   padding:1rem;
 }
 
@@ -1540,6 +1551,37 @@ ul.social-icons li:hover{
   max-width: 100%;
   width:100%;
   height: auto;
+}
+
+#slider{
+    width:100%;
+    height: 500px;
+    overflow:hidden;
+}
+
+#slider img{
+    max-width: 100%;
+    height:500px;
+}
+
+#slider .slides{
+    display: block;
+    width: 3840px;
+    height: 500px;
+    margin:0;
+    padding:0;
+}
+
+#slider .slide{
+    float:left;
+    list-style-type: none;
+    width:1920px;
+    height: 500px;
+}
+
+#slider ul.slides{
+    margin:0;
+    padding:0;
 }
 
 .mySlides {display:none}
@@ -1643,4 +1685,8 @@ ul.social-icons li:hover{
 
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+.show{
+    display: block;
 }

@@ -9,9 +9,13 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, afforable travel">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
 
+   
+
+    
   <!-- build:css assets/styles/styles.css -->
   <link rel='stylesheet' href='temp/styles/styles.css'>
-  <!-- endbuild -->
+  <!-- endbuild -->   
+    
   <!-- build:js assets/scripts/Vendor.js -->
   <script src="/temp/scripts/Vendor.js"></script>
   <!-- endbuild -->
@@ -34,7 +38,7 @@
 
       <div class="site-header__menu-content">
         <div class="site-header__btn-container">
-       <button class="btn btn-small btn--blue open-modal">Get In Touch</button>
+       <button class="btn btn-small btn--blue open-modal">CONTACT</button>
     </div>
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
@@ -48,88 +52,64 @@
   </header>
 
     
-<div id="home" class="large-hero slideshow-container" data-matching-link="home-link">
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <picture>
-                <img srcset="assets/images/hero-slider-01.jpg" class="large-hero__image">
-            </picture>
-            <div class="large-hero__text-content">
-                <div class="wrapper">
-                    <h2 class="large-hero__title">Your clarity.</h2>
-                    <h2 class="large-hero__sub-title">One trip away.</h2>
-                    <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-                </div>
-            </div>
+<div id="home" class="large-hero" data-matching-link="home-link">
+    <picture>
+        <source srcset="assets/images/hero-large-2.jpg 1920px" media="(min-width:1380x)" class="large-hero__image">
+        <source srcset="assets/images/hero-medium-2.jpg 990w" media="(min-width:990px)" class="large-hero__image">
+        <source srcset="assets/images/hero-medium-2.jpg 640w" media="(min-width:640px)" class="large-hero__image">
+        <img srcset="assets/images/hero-small-2.jpg 570w" class="large-hero__image">
+    </picture>
+
+    <div class="large-hero__text-content">
+        <div class="wrapper">
+            <h2 class="large-hero__title large-hero__title--white">Hi, I'm Tuatoe Daynuah</h2>
+            <p class="large-hero__description">Graphic Designer/UX Designer, Front-end Web Developer </p>
         </div>
-
-        <div class="mySlides fade">
-            <picture>
-                <img srcset="assets/images/hero-slider-02.jpg" class="large-hero__image">
-            </picture>
-            <div class="large-hero__text-content">
-                <div class="wrapper">
-                    <h2 class="large-hero__title">Your clarity.</h2>
-                    <h2 class="large-hero__sub-title">One trip away.</h2>
-                    <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-                </div>
-            </div>
-        </div>    
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
-    
 </div>
-    
+
   <!--projects-->
     <div id="projects" class="page-section page-section--gray page-section--no-b-padding-until-large projects" data-matching-link="projects-link">
         <div class="wrapper">
-            <h2 class="page-section__title page-section__title--gray-text">Projects</h2>
+            <h2 class="page-section__title page-section__title--gray-text">PORTFOLIO</h2>
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4 projects__new-projects">
+                <div class="row__medium-4 projects__new-projects reveal-project">
                     <a target="_blank" href="http://bksfoundation.org/">
                     <img src="assets/images/bks_thumb.jpg">
                     <h4>Benjamin Karmon Sehkar Foundation, Inc.</h4>
                     </a>
                     <div class="projects__new-projects__new">NEW</div>
                 </div>
-                <div class="row__medium-4  projects__new-projects">
+                <div class="row__medium-4  projects__new-projects reveal-project">
                     <a target="_blank" href="https://tuatoe.github.io/ominfoods/">
                     <img class="lazy" src="assets/images/omnifood_thumb.jpg">
                     <h4>Self Initiated Project: Omnifood</h4>
                     </a>
                      <div class="projects__new-projects__new">NEW</div>
                 </div>
-                <div class="row__medium-4  projects__new-projects">
+                <div class="row__medium-4  projects__new-projects reveal-project">
                     <a target="_blank" href="http://suyalounge.com/">
                     <img class="lazy" src="assets/images/suya_thumb.jpg">
                     <h4>Suya Lounge</h4>
                     </a>
-                    <div class="projects__new-projects__new">NEW</div>
                 </div>
             </div>
             
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="http://liberianhealthinitiative.org/">
                     <img src="assets/images/lhi_thumb.jpg">
                     <h4>Liberian Health Initiative</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
+                 <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
-                    <img class="lazy" src="assets/images/dk_thumb.jpg">
-                    <h4>Dennis Kirk's Concept Design</h4>
+                    <img src="assets/images/hes_thumb.jpg">
+                    <h4>Home Energy Solutions</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
+                
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
                     <img class="lazy" src="assets/images/srm_thumb.jpg">
                     <h4>Scotchlite&trade; Reflective Material</h4>
@@ -138,19 +118,21 @@
             </div>
             
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
+               
+                 <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
-                    <img src="assets/images/hes_thumb.jpg">
-                    <h4>Home Energy Solutions</h4>
+                    <img class="lazy" src="assets/images/dk_thumb.jpg">
+                    <h4>Dennis Kirk's Concept Design</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
+                
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
                     <img class="lazy" src="assets/images/sj_thumb.jpg">
                     <h4>Spicy Jay</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
                     <img class="lazy" src="assets/images/glc_thumb.jpg">
                     <h4>Greater Liberia Construction</h4>
@@ -159,19 +141,19 @@
             </div>
             
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
                     <img src="assets/images/panzsir_thumb.jpg">
                     <h4>Panzsir</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
                     <img class="lazy" src="assets/images/pid_thumb.jpg">
                     <h4>Power In Diversity</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
                     <img class="lazy" src="assets/images/logos_thumb.jpg">
                     <h4>Logos</h4>
@@ -180,7 +162,7 @@
             </div>
             
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
+                <div class="row__medium-4 reveal-project">
                     <a target="_blank" href="">
                     <img src="assets/images/prints_thumb.jpg">
                     <h4>Prints</h4>
@@ -233,18 +215,19 @@
     
 <div class="modal">
   <div class="modal__inner">
-    <div class="wrapper">
-      
-    </div>  
+    <h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Get in Touch</h2>
+    <div class="wrapper wrapper--narrow">
+      <p class="modal__description">For questions, or inquiries, <strong>Cell</strong>: <a href="tel:612-227-8433">612-227-8433</a>, <strong>Email</strong>: <a href="mailto:tuatoe.daynuah@gmail.com">tuatoe.daynuah@gmail.com</a></p>
+    </div>
+    <!--<div class="social-icons">
+        <a href="#" class="social-icons__icon"><span class="fa fa-facebook"> </span></a>
+        <a href="#" class="social-icons__icon"><span class="fa fa-twitter"> </span></a>
+    </div>-->
   </div>
 
   <div class="modal__close">X</div>
-    
 </div>
 
-    <!-- build:js assets/scripts/lightbox.js -->
-     <script src="temp/scripts/froogaloop2.min.js"></script>
-    <!-- endbuild -->
   
   <!-- build:js assets/scripts/App.js -->
   <script src="/temp/scripts/App.js"></script>

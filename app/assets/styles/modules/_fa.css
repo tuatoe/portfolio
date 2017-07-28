@@ -1,6 +1,11 @@
 .fa{
     color:#FFF;
-    font-size:1.5rem;
+    font-size:3rem;
+    position: absolute;
+    margin-top:17%;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
     &--green{
         color:$mainGreen;
     }
@@ -21,8 +26,3 @@
     }
 }
 
-.fa-edit:before,.fa-heart:before,
-.fa-star:before,.fa-pencil:before, 
-.fa-book:before,.fa-check-circle-o:before{
-    font-size:3rem;
-}
