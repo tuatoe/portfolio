@@ -1,4 +1,4 @@
-import $ from "jquery";
+/*import $ from "jquery";
 class SlideShow{
     
     constructor(){
@@ -49,7 +49,7 @@ class SlideShow{
     
 }
 
-export default SlideShow;
+export default SlideShow;*/
 
 /*
 

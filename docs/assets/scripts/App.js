@@ -70,22 +70,19 @@
 
 	var _TabContent2 = _interopRequireDefault(_TabContent);
 
-	var _SlideShow = __webpack_require__(9);
-
-	var _SlideShow2 = _interopRequireDefault(_SlideShow);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//import SlideShow from "./modules/SlideShow";
 
 	var mobileMenu = new _MobileMenu2.default();
 
-	//new RevealOnScroll($('.feature-item'), "85%");
-	//new RevealOnScroll($('.testimonial'), "60%");
+	new _RevealOnScroll2.default((0, _jquery2.default)('.reveal-project'), "70%");
 
 	var stickyHeader = new _StickyHeader2.default();
 
 	var modal = new _Modal2.default();
 
-	var slideShow = new _SlideShow2.default();
+	//var slideShow = new SlideShow();
 
 /***/ },
 /* 1 */
@@ -10860,7 +10857,7 @@
 	          element: currentPageSection,
 	          handler: function handler(direction) {
 	            if (direction == 'down') {
-	              var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+	              var matchingHeaderLink = currentPageSection.getAttribute('data-match-link');
 	              that.headerLinks.removeClass('is-current-link');
 	              (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
 	            }
@@ -10872,7 +10869,7 @@
 	          element: currentPageSection,
 	          handler: function handler(direction) {
 	            if (direction == 'up') {
-	              var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+	              var matchingHeaderLink = currentPageSection.getAttribute('data-match-link');
 	              that.headerLinks.removeClass('is-current-link');
 	              (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
 	            }
@@ -11243,7 +11240,46 @@
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*import $ from 'jquery';
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      class Modal{
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         constructor(){
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           this.openModalButton = $('.open-modal');
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           this.modal = $('.modal');
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           this.closeModalButton = $('.modal__close');
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           this.events();
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         events(){
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           //clicking the open modal button
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           this.openModalButton.on('click',$(this).openModal.bind($(this));
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           //clicking the x close modal button
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           this.closeModalButton.on('click',$(this).closeModal.bind($(this)));
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           //pushes any key
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           $(document).keyup($(this).keyPressHandler.bind($(this)));
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         keyPressHandler(e){
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           if(e.keyCode == 27){
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             $(this).closeModal();
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           }
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        openModal(){
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             var matchingModal = $(this).attr('data-matching-modal');
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             $('#'+matchingModal).addClass('modal--is-visible');
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         closeModal(){
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             $(this).modal.removeClass('modal--is-visible');
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     export default Modal;
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */
 
 	var _jquery = __webpack_require__(1);
 
@@ -11260,8 +11296,6 @@
 	    this.openModalButton = (0, _jquery2.default)('.open-modal');
 	    this.modal = (0, _jquery2.default)('.modal');
 	    this.closeModalButton = (0, _jquery2.default)('.modal__close');
-	    this.iframe = (0, _jquery2.default)('#player')[0];
-	    this.player = (0, _jquery2.default)(this.iframe);
 	    this.events();
 	  }
 
@@ -11269,21 +11303,10 @@
 	    key: 'events',
 	    value: function events() {
 	      //clicking the open modal button
-	      this.openModalButton.click(this.openModal.bind(this));
-	      this.openModalButton.on('click', function () {
-	        var iframe = (0, _jquery2.default)('#life-and-basketball')[0];
-	        var player = $f(iframe);
-	        player.api('play');
-	      });
+	      this.openModalButton.click(this.openModal);
+
 	      //clicking the x close modal button
 	      this.closeModalButton.click(this.closeModal.bind(this));
-	      this.closeModalButton.on('click', function () {
-	        //$('.modal .modal__inner iframe').attr('src', $('.modal .modal__inner iframe').attr('src')); 
-	        var iframe = (0, _jquery2.default)('#life-and-basketball')[0];
-	        var player = $f(iframe);
-	        player.api('pause');
-	        location.reload();
-	      });
 
 	      //pushes any key
 	      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
@@ -11298,7 +11321,10 @@
 	  }, {
 	    key: 'openModal',
 	    value: function openModal() {
-	      this.modal.addClass('modal--is-visible');
+	      var currentModal = (0, _jquery2.default)(this);
+	      var matchingModal = currentModal.attr('data-matching-modal');
+	      //this.modal.addClass('modal--is-visible');
+	      (0, _jquery2.default)('#' + matchingModal).addClass('modal--is-visible');
 	      return false;
 	    }
 	  }, {
@@ -11364,191 +11390,6 @@
 	}();
 
 	exports.default = TabContent;
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _jquery = __webpack_require__(1);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var SlideShow = function () {
-	    function SlideShow() {
-	        _classCallCheck(this, SlideShow);
-
-	        //configuration
-	        this.width = 1200;
-	        this.animationSpeed = 1000;
-	        this.pause = 3000;
-	        this.currentSlide = 1;
-
-	        //cache DOM
-	        this.heroSlider = (0, _jquery2.default)('#hero-slider');
-	        this.sliderContainer = this.heroSlider.find('.hero-slides');
-	        this.heroSlides = this.sliderContainer.find('.hero-slide');
-
-	        this.prev = (0, _jquery2.default)(".prev");
-	        this.next = (0, _jquery2.default)(".next");
-	        this.dots = (0, _jquery2.default)('.dot');
-
-	        this.interval;
-	        this.startSlider();
-	        this.events();
-	    }
-
-	    _createClass(SlideShow, [{
-	        key: 'events',
-	        value: function events() {
-	            this.heroSlider.on('mouseenter', this.stopSlider).on('mouseleave', this.startSlider);
-	        }
-	    }, {
-	        key: 'startSlider',
-	        value: function startSlider() {
-	            this.interval = setInterval(function () {
-	                //animate margin-left
-	                this.heroSlides.animate({ 'margin-left': '-=' + this.width }, this.animationSpeed, function () {
-	                    this.currentSlide++;
-	                    if (this.currentSlide === this.heroSlides.length) {
-	                        this.currentSlide = 1;
-	                        this.heroSlides.css('margin-left', '0');
-	                    }
-	                });
-	            }, this.pause);
-	        }
-	    }, {
-	        key: 'stopSlider',
-	        value: function stopSlider() {
-	            clearInterval(this.interval);
-	        }
-	    }]);
-
-	    return SlideShow;
-	}();
-
-	exports.default = SlideShow;
-
-	/*
-
-
-
-
-	 //configuration
-	    var width = 1200;
-	    var animationSpeed = 1000;
-	    var pause = 3000;
-	    var currentSlide = 1;
-	    
-	    //cache DOM
-	    var $heroSlider = $('#hero-slider');
-	    var $slideContainer = $heroSlider.find('.hero-slides');
-	    var $heroSlides = $slideContainer.find('.hero-slide')
-	    
-	    var interval;
-	    
-	    function startSlider(){
-	        interval = setInterval(function(){
-	            //animate margin-left
-	            $slideContainer.animate({'margin-left': '-=' +width}, animationSpeed,function(){
-	                currentSlide++;
-	                 //if it's last slide, go to position 1(0px)
-	                if(currentSlide === $heroSlides.length){
-	                    currentSlide = 1;
-	                    $slideContainer.css('margin-left', '0');
-	                }
-	            });
-	        }, pause);
-	    }
-	    
-	    function stopSlider(){
-	        clearInterval(interval);
-	    }
-	   
-	    $heroSlider
-	     //listen for mouseenter and pause  
-	        .on('mouseenter', stopSlider)
-	    //resume on mouseleave
-	        .on('mouseleave', startSlider);
-	    
-	    startSlider();
-
-
-
-	var slideIndex = 0;
-	showSlides();
-
-	function showSlides() {
-	    var i;
-	    var slides = document.getElementsByClassName("mySlides");
-	    var dots = document.getElementsByClassName("dot");
-	    for (i = 0; i < slides.length; i++) {
-	       slides[i].style.display = "none";  
-	    }
-	    slideIndex++;
-	    if (slideIndex> slides.length) {slideIndex = 1}    
-	    for (i = 0; i < dots.length; i++) {
-	        dots[i].className = dots[i].className.replace(" active", "");
-	    }
-	    slides[slideIndex-1].style.display = "block";  
-	    dots[slideIndex-1].className += " active";
-	    setTimeout(showSlides, 2000); // Change image every 2 seconds
-	}
-	*/
-
-	/*
-	 events(){
-	        prev.on('click',plusSlides(-1));
-	        next.on('click',plusSlides(1));
-	        
-	        dot.on('click',currentSlide(1));
-	        dot.on('click',currentSlide(2));
-	        dot.on('click',currentSlide(3));
-	    }
-	    
-	    showSlides(n) {
-	        var i;
-	        for (i = 0; i < slides.length; i++) {
-	           slides[i].style.display = "none";  
-	        }
-	        
-	        slideIndex++;
-	        
-	        if (slideIndex> slides.length) {
-	            slideIndex = 1
-	        } 
-	        
-	        for (i = 0; i < dots.length; i++) {
-	            dots[i].className = this.dots[i].className.replace(" active", "");
-	        }
-	        
-	        slides[slideIndex-1].style.display = "block";  
-	        
-	        dots[slideIndex-1].className += " active";
-	        
-	        setTimeout(showSlides, 2000); // Change image every 2 seconds
-	    }
-	    
-	    
-	    plusSlides(n) {
-	      showSlides(slideIndex += n);
-	    }
-
-	    currentSlide(n) {
-	      showSlides(slideIndex = n);
-	    }
-	*/
 
 /***/ }
 /******/ ]);

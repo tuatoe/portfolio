@@ -5,6 +5,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico"/>
   <title>Tuatoe Daynuah Online Portfolio</title>
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, afforable travel">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
@@ -12,7 +13,7 @@
    
 
     
-  <link rel="stylesheet" href="assets/styles/styles-5653f676aa.css"/>   
+  <link rel="stylesheet" href="assets/styles/styles-324cf9d9d1.css"/>   
     
   <script src="assets/scripts/Vendor.js"></script>
     
@@ -32,13 +33,12 @@
 
       <div class="site-header__menu-content">
         <div class="site-header__btn-container">
-       <button class="btn btn-small btn--blue open-modal">Get In Touch</button>
+       <button class="btn btn-small btn--blue open-modal" data-matching-modal="contact-modal">CONTACT</button>
     </div>
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
             <li><a href="#projects" id="projects-link">PROJECTS</a></li>
             <li><a href="#about-me" id="about-me-link">ABOUT ME</a></li>
-            <li><a href="#contact" id="contact-link">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -47,91 +47,65 @@
 
     
 <div id="home" class="large-hero" data-matching-link="home-link">
-    
-    <div id="heroSlider">
-        
-        <ul class="hero-slides">
-            <li class="hero-slide">
-             <picture>
-                <img srcset="assets/images/hero-slider-02.jpg" class="large-hero__image">
-            </picture>
-            <div class="large-hero__text-content">
-                <div class="wrapper">
-                    <h2 class="large-hero__title">Your clarity.</h2>
-                    <h2 class="large-hero__sub-title">One trip away.</h2>
-                    <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-                </div>
-            </div>
-            </li>
-             <li class="hero-slide">
-            <picture>
-                <img srcset="assets/images/hero-slider-01.jpg" class="large-hero__image">
-            </picture>
-            <div class="large-hero__text-content">
-                <div class="wrapper">
-                    <h2 class="large-hero__title">Your clarity.</h2>
-                    <h2 class="large-hero__sub-title">One trip away.</h2>
-                    <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-                </div>
-            </div>
-            </li>
-        </ul>
-        
-        <!--<a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>-->
-    </div>
-    
-    <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-    </div>
-    
-</div>
-    
-  <!--projects-->
-    <div id="projects" class="page-section page-section--gray page-section--no-b-padding-until-large projects" data-matching-link="projects-link">
+    <picture>
+        <source srcset="assets/images/hero-large-2.jpg 1920px" media="(min-width:1380x)" class="large-hero__image">
+        <source srcset="assets/images/hero-medium-2.jpg 990w" media="(min-width:990px)" class="large-hero__image">
+        <source srcset="assets/images/hero-medium-2.jpg 640w" media="(min-width:640px)" class="large-hero__image">
+        <img srcset="assets/images/hero-small-2.jpg 570w" class="large-hero__image">
+    </picture>
+
+    <div class="large-hero__text-content">
         <div class="wrapper">
-            <h2 class="page-section__title page-section__title--gray-text">Projects</h2>
+            <h2 class="large-hero__title large-hero__title--white">Hi, I'm Tuatoe Daynuah</h2>
+            <p class="large-hero__description">Graphic Designer && Front-end Web Developer </p>
+        </div>
+    </div>
+</div>
+
+  <!--projects-->
+    <div id="projects" class="page-section page-section--white page-section--no-b-padding-until-large projects" data-match-link="#projects-link">
+        <div class="wrapper">
+            <h2 class="page-section__title page-section__title--gray-text">PORTFOLIO</h2>
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4 projects__new-projects">
+                <div class="row__medium-4 projects__new-projects reveal-project">
                     <a target="_blank" href="http://bksfoundation.org/">
                     <img src="assets/images/bks_thumb.jpg">
                     <h4>Benjamin Karmon Sehkar Foundation, Inc.</h4>
                     </a>
                     <div class="projects__new-projects__new">NEW</div>
                 </div>
-                <div class="row__medium-4  projects__new-projects">
+                <div class="row__medium-4  projects__new-projects reveal-project">
                     <a target="_blank" href="https://tuatoe.github.io/ominfoods/">
                     <img class="lazy" src="assets/images/omnifood_thumb.jpg">
                     <h4>Self Initiated Project: Omnifood</h4>
                     </a>
                      <div class="projects__new-projects__new">NEW</div>
                 </div>
-                <div class="row__medium-4  projects__new-projects">
+                <div class="row__medium-4  projects__new-projects reveal-project">
                     <a target="_blank" href="http://suyalounge.com/">
                     <img class="lazy" src="assets/images/suya_thumb.jpg">
                     <h4>Suya Lounge</h4>
                     </a>
-                    <div class="projects__new-projects__new">NEW</div>
                 </div>
             </div>
             
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
-                    <a target="_blank" href="http://liberianhealthinitiative.org/">
-                    <img src="assets/images/lhi_thumb.jpg">
-                    <h4>Liberian Health Initiative</h4>
-                    </a>
-                </div>
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
+                
+                 <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="dk-modal"href="">
                     <img class="lazy" src="assets/images/dk_thumb.jpg">
                     <h4>Dennis Kirk's Concept Design</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
+                 <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="hes-modal" href="">
+                    <img src="assets/images/hes_thumb.jpg">
+                    <h4>Home Energy Solutions</h4>
+                    </a>
+                </div>
+                
+                <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="srm-modal" href="">
                     <img class="lazy" src="assets/images/srm_thumb.jpg">
                     <h4>Scotchlite&trade; Reflective Material</h4>
                     </a>
@@ -139,62 +113,53 @@
             </div>
             
             <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
-                    <img src="assets/images/hes_thumb.jpg">
-                    <h4>Home Energy Solutions</h4>
-                    </a>
-                </div>
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
+                
+                
+                <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="spicy-jay-modal" href="">
                     <img class="lazy" src="assets/images/sj_thumb.jpg">
                     <h4>Spicy Jay</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
+                <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="glc-modal" href="">
                     <img class="lazy" src="assets/images/glc_thumb.jpg">
                     <h4>Greater Liberia Construction</h4>
                     </a>
                 </div>
-            </div>
-            
-            <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
-                    <img src="assets/images/panzsir_thumb.jpg">
-                    <h4>Panzsir</h4>
-                    </a>
-                </div>
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
+                
+                 <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="pid-modal" href="">
                     <img class="lazy" src="assets/images/pid_thumb.jpg">
                     <h4>Power In Diversity</h4>
                     </a>
                 </div>
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
+            </div>
+            
+            <div class="row row--gutters-small margin-b-until-medium">
+              
+               
+                <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="logo-modal" href="">
                     <img class="lazy" src="assets/images/logos_thumb.jpg">
                     <h4>Logos</h4>
                     </a>
                 </div>
-            </div>
-            
-            <div class="row row--gutters-small margin-b-until-medium">
-                <div class="row__medium-4">
-                    <a target="_blank" href="">
+                  <div class="row__medium-4 reveal-project">
+                    <a target="_blank" class="open-modal" data-matching-modal="print-modal" href="">
                     <img src="assets/images/prints_thumb.jpg">
                     <h4>Prints</h4>
                     </a>
                 </div>
             </div>
+          
         </div>
     </div>
   <!--projects-->
     
 
     <!--about me-->
-    <div id="about-me" class="page-section page-section--no-b-padding-until-large about-me" data-matching-link="about-me-link">
+    <div id="about-me" class="page-section page-section--gray page-section--no-b-padding-until-large about-me" data-match-link="#about-me-link">
         <div class="wrapper">
             <h2 class="page-section__title page-section__title--gray-text">About Me</h2>
             <div class="row row--gutters-small margin-b-until-medium">
@@ -208,7 +173,7 @@
                         <li> Experience with internet design best practices including browser compatibility, accessibility, coding standards and performance.</li>
                         <li>Working agile: I know scrum, and have worked in serveral projects and teams using it.</li>
                         <li>Experience with Mobile and Responsive Design / Development.</li>
-                        <li>I know JavaScript, JQuery, Node, Webpack, Gulp, Babel, Waypoints, HTML5, HTML, BEM, CSS3, CSS, POST-CSS, LESS, SASS, GIT, Jira, Bootstrap, Foundation, SEO Best Practices, Google Analytics, Adobe Photoshop, Adobe Illustrator, Sketch and many more...</li>
+                        <li>I know JavaScript, JQuery, Node, Webpack, Gulp, Babel, HTML5, HTML, BEM, CSS3, CSS, POST-CSS, LESS, SASS, GIT, Jira, Bootstrap, Foundation, SEO Best Practices, Google Analytics, Adobe Dreamweaver, Adobe Photoshop, Adobe Illustrator and many more...</li>
                     </ul>
 
                 </div>
@@ -217,13 +182,7 @@
         </div>
     </div>
     <!--about me-->
-    
-    
-    <!--get in touch modal-->
-    
-    <!--get in touch-->
-    
-    
+   
    
     <footer class="footer page-section--blue">
         <div class="wrapper">
@@ -231,17 +190,320 @@
         </div>
     </footer>
     
-    
-<div class="modal">
-  <div class="modal__inner">
-    <div class="wrapper">
-      
-    </div>  
-  </div>
 
+<!--contact modal-->
+<div class="modal" id="contact-modal">
+  <div class="modal__inner">
+    <h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Get in Touch</h2>
+    <div class="wrapper wrapper--narrow">
+      <p class="modal__description">For questions, or inquiries, <strong>Cell</strong>: <a href="tel:612-227-8433">612-227-8433</a>, <strong>Email</strong>: <a href="mailto:tuatoe.daynuah@gmail.com">tuatoe.daynuah@gmail.com</a></p>
+    </div>
+  </div>
   <div class="modal__close">X</div>
-    
 </div>
+<!--end contact modal-->
+
+<!--Dennis Kirk modal-->
+<div class="modal" id="dk-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">Dennis Krik</h3>
+                <p><strong>Designer</strong></p>
+                <p>Skills needed: Adobe Photoshop and Adobe Illustrator</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>Re-skinning Dennis Krik home page</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                <p>Tuatoe Daynuah</p>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/dennis-kirk/dk-img.jpg" alt="Dennis Krik">
+          <p><i>Current Site</i></p>
+          <img src="assets/images/projects/dennis-kirk/dk-img-2.jpg" alt="Dennis Krik">
+          <p>Black &amp; White</p>
+          
+           <img src="assets/images/projects/dennis-kirk/dk-img-3.jpg" alt="Dennis Krik">
+          <p>Black &amp; Yellow</p>
+       
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+<!--end Dennis Kirk modal-->
+    
+<!--Home Energy Solutions-->
+<div class="modal" id="hes-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">3M<sup>&trade;</sup> Home Energy Solutions</h3>
+                <p><strong>Developer</strong></p>
+                <p>Skills needed: CSS, HTML, FatWire(CMS), WebSphere Portal, jQuery and JavaScript</p>
+                <a class="visit-site"  target="_blank" href="http://www.3m.com/3M/en_US/company-us/all-3m-products/~/All-3M-Products/Consumer/Home-Improvement/3M-Home-Energy/?N=5002385+8709316+8740610+8743720+3294857497&rt=r3">Visit Site</a>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>This was my first fully "owned" site redesign and launch. I was able to implement much of my prior learning from working on other projects and learned the complexity involved in owning and communicating on a project. Site was designed by SHINEBOX, the energy calculator was also developed by SHINEBOX.</p>
+                <p><i>The site may not appear the same as in the image on this page. This is due to the fact that 3M<sup>&trade;</sup> regularly updates and change the look of their sites based on the needs of today's consumer.</i></p>
+                
+                <p><strong><i>NOTE: I do not claim ownership of this site but simply that I helped build it.</i></strong></p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                <ul>
+                    <li>Tuatoe Daynuah</li>
+                    <li>SHINEBOX</li>
+                    <li>David Camacho</li>
+                    <li>Ashley LaBlanc</li>
+                    <li>Joshua Kley</li>
+                </ul>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/home-energy-solutions/home-energy-solutions-img.jpg" alt="Home Energy Solutions">
+        <img src="assets/images/projects/home-energy-solutions/home-energy-solutions-img-2.jpg" alt="Home Energy Solutions">
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+<!--end Home Energy Solutions-->
+    
+<!--Scotchlite Reflective Material-->
+<div class="modal" id="srm-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">3M<sup>&trade;</sup> Scotchlite<sup>&trade;</sup></h3>
+                <p><strong>Developer</strong></p>
+                <p>Skills needed: CSS, HTML, FatWire, WebSphere Portal, jQuery and </p>
+                <a class="visit-site"target="_blank" href="http://www.3m.com/3M/en_US/scotchlite-reflective-material-us/">Visit Site</a>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>Site was designed by Daniel, Matt and I. I was the lead developer on the Scotchlite site redesign. As a lead developer I delegated sections to developers, and I helped develope the Home page, Design lab section, Contact Us and the Brand Assets section.</p>
+                <p><i>The site may not appear the same as in the image on this page. This is due to the fact that 3M regularly updates and change the look of their sites based on the needs of today's consumer.</i></p>
+                <p><strong><i>NOTE: I do not claim ownership of this site but simply that I helped build it.</i></strong></p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                 <ul>
+                    <li>Tuatoe Daynuah</li>
+                    <li>Daniel Bailey</li>
+                    <li>Matt Laison</li>
+                    <li>Quang Vo</li>
+                    <li>Jack Lee</li>
+                    <li>John Koch</li>
+                    <li>Joshua Kley</li>
+                    <li>David Borgstrom</li>
+                </ul>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/scotchlite-reflective-material/scotchlite-img.jpg" alt="scotchlite reflective material">
+          
+           <img src="assets/images/projects/scotchlite-reflective-material/scotchlite-img-2.jpg" alt="scotchlite reflective material">
+          
+           <img src="assets/images/projects/scotchlite-reflective-material/scotchlite-img-3.jpg" alt="scotchlite reflective material">
+      
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+<!--end Scotchlite Reflective Material-->
+    
+<!--spicy jay-->
+<div class="modal" id="spicy-jay-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">Spicy Jay</h3>
+                <p><strong>Designer</strong></p>
+                <p>Skills needed: Adobe Photoshop, Adobe Illustrator and Canon 6D</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>Homemade Pepper Sauce, made with 100% Habanero pepper</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                <p>Tuatoe Daynuah</p>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/spicy-jay/spicy-jay-logo.jpg" alt="Spicy Jay">
+        <img src="assets/images/projects/spicy-jay/spicy-jay-img.jpg" alt="Spicy Jay">
+        <img src="assets/images/projects/spicy-jay/spicy-jay-img-2.jpg" alt="Spicy Jay">
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+<!--end spicy jay-->
+    
+    <!--greater liberia construction modal-->
+<div class="modal" id="glc-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">Greater Liberia Construction</h3>
+                <p><strong>Designer</strong></p>
+                <p>Skills needed: Adobe Photoshop, Adobe Illustrator and Adobe InDesign</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>GLC's goal is to be the preferred choice in the Greater Liberia Construction marketplace by creating an exceptional customer experience.</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                <p>Tuatoe Daynuah</p>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/greater-liberia-construction/glc-logo.jpg" alt="Greater Liberia Construction">
+          <img src="assets/images/projects/greater-liberia-construction/glc-img.jpg" alt="Greater Liberia Construction">
+          <img src="assets/images/projects/greater-liberia-construction/glc-img-2.jpg" alt="Greater Liberia Construction">
+          <img src="assets/images/projects/greater-liberia-construction/glc-img-3.jpg" alt="Greater Liberia Construction">
+          <img src="assets/images/projects/greater-liberia-construction/glc-img-4.jpg" alt="Greater Liberia Construction">
+          <img src="assets/images/projects/greater-liberia-construction/glc-img-5.jpg" alt="Greater Liberia Construction">
+        
+       
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+    <!--end greater liberia construction modal-->
+    
+    <!--power in diversity st cloud mn modal-->
+<div class="modal" id="pid-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">Power In Diversity</h3>
+                <p><strong>Designer</strong></p>
+                <p>Skills needed: Adobe Photoshop, Adobe Illustrator, Adobe InDesign and Canon 6D</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>The Power in Diversity is an annual Leadership Conference hosted by the Multicultural Student Services at St. Cloud State University. In 2012 I designed the program book plus other promotional pieces for the 3rd Annual Power In Diversity Leadership Conference.</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                <p>Tuatoe Daynuah</p>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/power-in-diversity/pid-img.jpg" alt="Power In Diversity promotioanl piece">
+          <img src="assets/images/projects/power-in-diversity/pid-img-2.jpg" alt="Power In Diversity promotioanl piece">
+          <img src="assets/images/projects/power-in-diversity/pid-img-3.jpg" alt="Power In Diversity promotioanl piece">
+          <img src="assets/images/projects/power-in-diversity/pid-img-4.jpg" alt="Power In Diversity promotioanl piece">
+          <img src="assets/images/projects/power-in-diversity/pid-img-5.jpg" alt="Power In Diversity promotioanl piece">
+          <img src="assets/images/projects/power-in-diversity/pid-img-6.jpg" alt="Power In Diversity promotioanl piece">
+       
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+    <!--end power in diversity st cloud mn modal-->
+    
+<!--print modal-->
+<div class="modal" id="print-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">Prints</h3>
+                <p><strong>Designer</strong></p>
+                <p>Skills needed: Adobe Photoshop and Adobe Illustrator</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>Prints</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                <p>Tuatoe Daynuah</p>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/prints/queeta-david-save-the-date.jpg" alt="Queeta and David save the date">
+        <img src="assets/images/projects/prints/mornjay-tuatoe-save-the-date.jpg" alt="Mornjay and Tuatoe save the date">
+        <img src="assets/images/projects/prints/travel-south-africa-post-card.jpg" alt="travel south africa post card">
+        <img src="assets/images/projects/prints/mlk-poster.jpg" alt="Martin Luther King Jr. poster">
+          <img src="assets/images/projects/prints/semester-poster.jpg" alt="Semester poster">
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+    <!--end print modal-->
+    
+<!--logo modal-->
+<div class="modal" id="logo-modal">
+  <div class="modal__inner">
+    <!--<h2 class="section-title section-title--blue section-title--less-margin"><span class="icon icon--mail section-title__icon"></span>Logos</h2>-->
+    <div class="wrapper">
+        <div class="row row--gutters-small">
+            <div class="row__medium-4">
+                <h3 class="border-bottom">Logos</h3>
+                <p><strong>Designer</strong></p>
+                <p>Skills needed: Adobe Photoshop and Adobe Illustrator</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Description</h3>
+                <p>Logo Designs for a variety of organizations, and businesses.</p>
+            </div>
+            <div class="row__medium-4">
+                <h3>Credit</h3>
+                <p>Tuatoe Daynuah</p>
+            </div>
+        </div>
+      <div class="row">
+        <img src="assets/images/projects/logos/bks-logo.jpg" alt="Benjamin Karmon Sehkar Foundation Inc.">
+        <img src="assets/images/projects/logos/spicy-jay-logo.jpg" alt="Spicy Jay"> 
+        <img src="assets/images/projects/logos/glc-logo.jpg" alt="Greater Liberia Construction">
+        <img src="assets/images/projects/logos/lhi-logo.jpg" alt="Liberian Health Initiative"> 
+        <img src="assets/images/projects/logos/lmt-logo.jpg" alt="Liberia MyTurn"> 
+        <img src="assets/images/projects/logos/manly-logo.jpg" alt="David Manly Collection"> 
+        <img src="assets/images/projects/logos/panzsir-logo.jpg" alt="Panzsir">
+        <img src="assets/images/projects/logos/sinkor-logo.jpg" alt="Sinkor Print"> 
+        <img src="assets/images/projects/logos/water-side-market-logo.jpg" alt="Water Side Market"> 
+    </div>
+
+    </div>
+  </div>
+  <div class="modal__close">X</div>
+</div>
+<!--end logo modal-->    
 
   
   <script src="assets/scripts/App.js"></script>

@@ -729,6 +729,10 @@ button{
   background-color:#eee;
 }
 
+.page-section--white{
+  background-color:#FFF;
+}
+
 .page-section--green{
   background-color:#00d089
 }
@@ -1118,8 +1122,8 @@ button{
   }
 
   .site-header--dark .site-header__logo {
-    -webkit-transform: scale(.68);
-            transform: scale(.68);
+    -webkit-transform: scale(.57);
+            transform: scale(.57);
   }
 }
 
@@ -1353,8 +1357,7 @@ button{
   }
 
   .primary-nav a.is-current-link {
-    background-color: #00d089;
-    color: #FFF;
+    color: #66ccff;
   }
 }
 
@@ -1373,8 +1376,8 @@ button{
 
 .modal{
   position: fixed;
-  z-index: 5;
-  background-color: rgba(255,255,255,.94);
+  z-index: 26;
+  background-color: rgba(23,23,23,.9);
   top:0;
   bottom:0;
   left:0;
@@ -1384,6 +1387,7 @@ button{
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   transition: all .3s ease-out;
+    color:#FFF;
 }
 
 .modal--is-visible{
@@ -1396,9 +1400,38 @@ button{
 .modal__inner {
   position: absolute;
   width:100%;
+  height: 100%;
+  overflow-y: auto;
   top:50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  padding-top:2rem;
+}
+
+.modal__inner .border-bottom{
+  padding-bottom:.3em;
+  border-bottom:2px solid #66ccff;
+}
+
+.modal__inner ul{
+  margin:.5rem 0 0 1rem;
+  padding:0;
+}
+
+.modal__inner ul li{
+  margin-bottom:.5rem;
+}
+
+.modal__inner .visit-site{
+  padding:.5rem 1rem;
+  color:#FFF;
+  background:#66ccff;
+  border-radius: .3rem;
+  text-transform: uppercase;
+}
+
+.modal__inner .visit-site:hover{
+  background-color:#123241;
 }
 
 .modal__description{
@@ -1417,12 +1450,36 @@ button{
           transform: scaleX(1.2);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
-  color:#123241;
+  color:#66ccff;
 }
 
 .modal__close:hover{
-  color:#d59541;
+  color:#123241;
   cursor: pointer;
+}
+
+.modal h2{
+  padding-top:2rem;
+  color:#FFF;
+}
+
+.modal h3{
+  margin-bottom:0;
+  padding-bottom:0;
+  color:#FFF;
+  font-size:1.5rem;
+}
+
+.modal p{
+  margin-top:.3rem;
+  font-weight: 300;
+  color:#555;
+  line-height: 1.625;
+  color:#FFF;
+}
+
+.modal a{
+  color:#FFF;
 }
 
 .fa{
@@ -1458,6 +1515,8 @@ button{
 .footer{
     text-align: center;
     color:#FFF;
+    font-weight: 100;
+    font-size:.85rem;
 }
 
 .social-icons{
@@ -1524,6 +1583,20 @@ button{
   max-width: 100%;
   height: auto;
   border:0;
+}
+
+.about-me p{
+  font-weight: 300;
+  color:#555;
+}
+
+.about-me ul{
+  color:#555;
+}
+
+.about-me ul li{
+  margin-bottom:.5rem;
+  font-weight: 300;
 }
 
 .projects h4{

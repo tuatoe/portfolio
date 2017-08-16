@@ -26,6 +26,10 @@
     &--gray{
         background-color:#eee;
     }
+    
+    &--white{
+        background-color:#FFF;
+    }
     &--green{
         background-color:$mainGreen
     }

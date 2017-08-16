@@ -29,4 +29,16 @@
             border:0;
         }
     }
+    & p{
+        font-weight: 300;
+        color:#555;
+    }
+    
+    & ul{
+        color:#555;
+        li{
+            margin-bottom:.5rem;
+            font-weight: 300;
+        }
+    }
 }

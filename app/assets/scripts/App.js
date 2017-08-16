@@ -4,7 +4,7 @@ import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
 import Modal from "./modules/Modal";
 import TabContent from "./modules/TabContent";
-import SlideShow from "./modules/SlideShow";
+//import SlideShow from "./modules/SlideShow";
 
 var mobileMenu = new MobileMenu();
 
@@ -14,5 +14,5 @@ var stickyHeader = new StickyHeader();
 
 var modal = new Modal();
 
-var slideShow = new SlideShow();
+//var slideShow = new SlideShow();
 

@@ -9,7 +9,7 @@ class StickyHeader {
       this.headerTriggerElement = $('.large-hero__title');
       this.createHeaderWaypoint();
       this.pageSections = $('.page-section');
-      this.headerLinks = $('.primary-nav a')
+      this.headerLinks = $('.primary-nav a');
       this.createPageSectionWaypoints();
       this.addSmoothScrolling();
       this.refreshWaypoints();
@@ -47,7 +47,7 @@ class StickyHeader {
             element:currentPageSection,
             handler:function(direction){
               if(direction == 'down'){
-                var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+                var matchingHeaderLink = currentPageSection.getAttribute('data-match-link');
                 that.headerLinks.removeClass('is-current-link')
                 $(matchingHeaderLink).addClass('is-current-link');
               }
@@ -60,7 +60,7 @@ class StickyHeader {
             element:currentPageSection,
             handler:function(direction){
               if(direction == 'up'){
-                var matchingHeaderLink = currentPageSection.getAttribute('data-matching-link');
+                var matchingHeaderLink = currentPageSection.getAttribute('data-match-link');
                 that.headerLinks.removeClass('is-current-link')
                 $(matchingHeaderLink).addClass('is-current-link');
               }
