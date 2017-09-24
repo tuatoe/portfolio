@@ -85,7 +85,7 @@ a {
     text-decoration: none;
     font-weight: 300;
     font-size:1rem;
-    background-color: rgba($mainBlue,.8);
+    background-color: rgba($mainBlue,1);
     display: block;
     cursor: pointer;
     padding:10px;

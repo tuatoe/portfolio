@@ -491,8 +491,22 @@ button{
 }
 
 .large-hero{
+  background-image: url('../../assets/images/hero-large-2.jpg');
+  min-height:300px;
+  padding-bottom:30px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-bottom: 5px solid rgba(102,204,255,.8);
   position: relative;
+}
+
+@media(min-width:800px) {
+
+  .large-hero {
+    min-height: 800px;
+  }
 }
 
 .large-hero__text-content{
@@ -509,7 +523,7 @@ button{
 @media(min-width:800px) {
 
   .large-hero__text-content {
-    padding-top: 60px;
+    padding-top: 20px;
   }
 }
 
@@ -521,7 +535,8 @@ button{
   font-weight:300;
   color:#123241;
   font-size:2rem;
-  margin:0;
+  margin-top:.5em;
+  margin-bottom:0;
   font-weight: bold;
 }
 
@@ -539,7 +554,9 @@ button{
 @media(min-width:800px) {
 
   .large-hero__title {
-    font-size: 4rem;
+    margin-top: 2em;
+    margin-bottom: 0;
+    font-size: 3rem;
   }
 }
 
@@ -563,7 +580,7 @@ button{
   font-weight: 700;
   font-weight: 100;
   text-shadow: 2px 2px 0 rgba(0,0,0,.1);
-  max-width:30rem;
+  max-width:40rem;
   margin-left:auto;
   margin-right:auto;
 }
@@ -740,7 +757,7 @@ button{
 .page-section__title{
   text-align: center;
   color:#123241;
-  margin-bottom:1.2em;
+  margin-bottom:.4em;
   font-size:3.5rem;
   font-weight: 300;
 }
@@ -759,6 +776,13 @@ button{
 
 .page-section__title--white-text{
   color:#FFF;
+}
+
+@media(min-width:800px) {
+
+  .page-section__title {
+    margin-bottom: 1.2rem;
+  }
 }
 
 .page-section--our-success{
@@ -1074,7 +1098,7 @@ button{
 }
 
 .site-header--is-expanded{
-  background-color: rgba(18,50,65, .55);
+  background-color: rgba(102,204,255, .75);
 }
 
 @media(min-width:800px) {
@@ -1338,7 +1362,7 @@ button{
   text-decoration: none;
   font-weight: 300;
   font-size:1rem;
-  background-color: rgba(18,50,65,.8);
+  background-color: rgba(18,50,65,1);
   display: block;
   cursor: pointer;
   padding:10px;
